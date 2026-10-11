@@ -1,0 +1,166 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+    {
+      "id": "wk_hyp_beg_1",
+      "name": "Beginner - Full Body A",
+      "description": "Hypertrophy: Legs, Chest, Back, Core",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hb1_1",
+          "name": "Barbell Squat",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 20,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb1_2",
+          "name": "Barbell Bench Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 20,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb1_3",
+          "name": "Lat Pulldown",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 25,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb1_4",
+          "name": "Plank Hold",
+          "type": "timebased",
+          "sets": 3,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 3,
+          "restSeconds": 45,
+          "weight": null,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.379Z"
+    },
+    {
+      "id": "wk_hyp_beg_2",
+      "name": "Beginner - Full Body B",
+      "description": "Hypertrophy: Posterior Chain, Shoulders, Row",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hb2_1",
+          "name": "Barbell Deadlift",
+          "type": "standard",
+          "sets": 3,
+          "reps": 6,
+          "restSeconds": 120,
+          "weight": 30,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb2_2",
+          "name": "Dumbbell Overhead Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 6,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb2_3",
+          "name": "Seated Cable Row",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 20,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb2_4",
+          "name": "Glute Bridge",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 45,
+          "weight": 10,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.379Z"
+    },
+    {
+      "id": "wk_hyp_beg_3",
+      "name": "Beginner - Full Body C",
+      "description": "Hypertrophy: Leg Press, Upper Chest, Back, Obliques",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hb3_1",
+          "name": "Leg Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 90,
+          "weight": 40,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb3_2",
+          "name": "Incline Dumbbell Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 90,
+          "weight": 8,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb3_3",
+          "name": "Dumbbell Row",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 8,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hb3_4",
+          "name": "Cable Woodchoppers",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 45,
+          "weight": 10,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+   ]
+}

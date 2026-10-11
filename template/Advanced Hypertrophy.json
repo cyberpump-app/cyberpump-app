@@ -1,0 +1,175 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+   
+    {
+      "id": "wk_hyp_adv_1",
+      "name": "Advanced - Upper Body Strength",
+      "description": "Hypertrophy: Heavy Chest & Back",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_ha1_1",
+          "name": "Incline Barbell Bench Press",
+          "type": "standard",
+          "sets": 4,
+          "reps": 5,
+          "restSeconds": 120,
+          "weight": 40,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha1_2",
+          "name": "Barbell Row",
+          "type": "standard",
+          "sets": 4,
+          "reps": 6,
+          "restSeconds": 120,
+          "weight": 40,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha1_3",
+          "name": "Dumbbell Shoulder Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 14,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha1_4",
+          "name": "Cable Chest Flyes",
+          "type": "standard",
+          "sets": 3,
+          "reps": "MAX",
+          "restSeconds": 60,
+          "weight": 10,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_hyp_adv_2",
+      "name": "Advanced - Lower Body Density",
+      "description": "Hypertrophy: Leg Strength & Mass",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_ha2_1",
+          "name": "Barbell Squat",
+          "type": "standard",
+          "sets": 4,
+          "reps": 5,
+          "restSeconds": 120,
+          "weight": 50,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha2_2",
+          "name": "Barbell Deadlift",
+          "type": "standard",
+          "sets": 3,
+          "reps": 5,
+          "restSeconds": 120,
+          "weight": 60,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha2_3",
+          "name": "Bulgarian Split Squat",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 10,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha2_4",
+          "name": "Standing Calf Raises",
+          "type": "standard",
+          "sets": 4,
+          "reps": 15,
+          "restSeconds": 45,
+          "weight": 40,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_hyp_adv_3",
+      "name": "Advanced - Hyper Arms & Shoulders",
+      "description": "Hypertrophy: Arms & Delts Focus",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_ha3_1",
+          "name": "Dumbbell Incline Bench Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 90,
+          "weight": 16,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha3_2",
+          "name": "Lat Pulldown (Wide Grip)",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 90,
+          "weight": 40,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha3_3",
+          "name": "Dumbbell Lateral Raises",
+          "type": "standard",
+          "sets": 4,
+          "reps": 12,
+          "restSeconds": 45,
+          "weight": 8,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha3_4",
+          "name": "Skull Crushers (EZ Bar)",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 15,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_ha3_5",
+          "name": "Dumbbell Hammer Curls",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 10,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+   
+    {
+      "id": "wk_fat_adv_1",
+      "name": "Advanced - Metcon A",
+      "description": "Fat Loss: Total Body Power & Explosiveness",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fa1_1",
+          "name": "Dumbbell Devil Press",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 10,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa1_2",
+          "name": "Barbell Thrusters",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 20,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa1_3",
+          "name": "Pull-Ups",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": null,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa1_4",
+          "name": "Box Jumps",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_adv_2",
+      "name": "Advanced - Metcon B",
+      "description": "Fat Loss: Hinges, Push, Pull, Extreme Cardio",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fa2_1",
+          "name": "Kettlebell Swings (Heavy)",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 16,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa2_2",
+          "name": "Dumbbell Push Press",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 12,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa2_3",
+          "name": "Dumbbell Renegade Row",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 10,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa2_4",
+          "name": "Burpees",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_adv_3",
+      "name": "Advanced - Metcon C",
+      "description": "Fat Loss: Pure Strength, Core & Plyo",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fa3_1",
+          "name": "Barbell Power Clean",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 40,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa3_2",
+          "name": "Push-Up to Renegade Row",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": 10,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa3_3",
+          "name": "Jump Squats",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": null,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fa3_4",
+          "name": "Hanging Leg Raises",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 15,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+  ]
+}

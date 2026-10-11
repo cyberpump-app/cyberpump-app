@@ -1,0 +1,172 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+   
+    {
+      "id": "wk_fat_beg_1",
+      "name": "Beginner - Total Body Circuit A",
+      "description": "Fat Loss: Anterior Focus (Quads, Chest, Row)",
+      "mode": "circuit",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fb1_1",
+          "name": "Goblet Squat",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 8,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb1_2",
+          "name": "Push-Ups / Knee Push-Ups",
+          "type": "standard",
+          "sets": 1,
+          "reps": 10,
+          "restSeconds": 30,
+          "weight": null,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb1_3",
+          "name": "Dumbbell Row",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 6,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb1_4",
+          "name": "Jumping Jacks",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 45,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 30,
+          "weight": null,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_beg_2",
+      "name": "Beginner - Total Body Circuit B",
+      "description": "Fat Loss: Posterior Focus (Hamstrings, Shoulders, Core)",
+      "mode": "circuit",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fb2_1",
+          "name": "Dumbbell RDL",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 6,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb2_2",
+          "name": "Dumbbell Shoulder Press",
+          "type": "standard",
+          "sets": 1,
+          "reps": 10,
+          "restSeconds": 30,
+          "weight": 4,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb2_3",
+          "name": "Lat Pulldown",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 20,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb2_4",
+          "name": "Mountain Climbers",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 30,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 30,
+          "weight": null,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_beg_3",
+      "name": "Beginner - Total Body Circuit C",
+      "description": "Fat Loss: Machines & Quick Cardio",
+      "mode": "circuit",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fb3_1",
+          "name": "Leg Press",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 30,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb3_2",
+          "name": "Dumbbell Bench Press",
+          "type": "standard",
+          "sets": 1,
+          "reps": 10,
+          "restSeconds": 30,
+          "weight": 6,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb3_3",
+          "name": "Cable Row",
+          "type": "standard",
+          "sets": 1,
+          "reps": 12,
+          "restSeconds": 30,
+          "weight": 15,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_fb3_4",
+          "name": "High Knees",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 30,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 30,
+          "weight": null,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+   
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+    {
+      "id": "wk_hyp_int_1",
+      "name": "Intermediate - Push",
+      "description": "Hypertrophy: Chest, Shoulders, Triceps",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hi1_1",
+          "name": "Barbell Bench Press",
+          "type": "standard",
+          "sets": 4,
+          "reps": 6,
+          "restSeconds": 120,
+          "weight": 30,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi1_2",
+          "name": "Incline Dumbbell Press",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 10,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi1_3",
+          "name": "Dumbbell Lateral Raises",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 60,
+          "weight": 4,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi1_4",
+          "name": "Triceps Pushdowns",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 60,
+          "weight": 15,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_hyp_int_2",
+      "name": "Intermediate - Pull",
+      "description": "Hypertrophy: Back, Biceps, Rear Delts",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hi2_1",
+          "name": "Pull-Ups / Assisted",
+          "type": "standard",
+          "sets": 4,
+          "reps": 8,
+          "restSeconds": 120,
+          "weight": null,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi2_2",
+          "name": "Barbell Bent-Over Row",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 25,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi2_3",
+          "name": "Face Pulls (Cable)",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 60,
+          "weight": 12.5,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi2_4",
+          "name": "Barbell Biceps Curl",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 15,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_hyp_int_3",
+      "name": "Intermediate - Legs & Abs",
+      "description": "Hypertrophy: Quads, Hamstrings, Glutes, Core",
+      "mode": "standard",
+      "circuitCycles": 3,
+      "circuitRestSeconds": 90,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_hi3_1",
+          "name": "Barbell Back Squat",
+          "type": "standard",
+          "sets": 4,
+          "reps": 6,
+          "restSeconds": 120,
+          "weight": 30,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi3_2",
+          "name": "Romanian Deadlift",
+          "type": "standard",
+          "sets": 3,
+          "reps": 8,
+          "restSeconds": 90,
+          "weight": 30,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi3_3",
+          "name": "Walking Lunges",
+          "type": "standard",
+          "sets": 3,
+          "reps": 10,
+          "restSeconds": 60,
+          "weight": 8,
+          "autoAdvance": false
+        },
+        {
+          "id": "ex_hi3_4",
+          "name": "Hanging Knee Raises",
+          "type": "standard",
+          "sets": 3,
+          "reps": 12,
+          "restSeconds": 60,
+          "weight": null,
+          "autoAdvance": false
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+   
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "app": "CYBERPUMP",
+  "version": "1.0",
+  "exportedAt": "2026-10-11T13:38:08.632Z",
+  "workoutsCount": 3,
+  "workouts": [
+   
+    {
+      "id": "wk_fat_int_1",
+      "name": "Intermediate - Time-Based Total Body",
+      "description": "Fat Loss: Kettlebell, Chest, Core",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 60,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fi1_1",
+          "name": "Kettlebell Swings",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 12,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi1_2",
+          "name": "Push-Ups",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": null,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi1_3",
+          "name": "Dumbbell Thrusters",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 6,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi1_4",
+          "name": "Plank Hold",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_int_2",
+      "name": "Intermediate - Time-Based Legs & Shoulders",
+      "description": "Fat Loss: Lunges, Press, Row, Cardio",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 60,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fi2_1",
+          "name": "Dumbbell Walking Lunges",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 6,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi2_2",
+          "name": "Incline Dumbbell Press",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 8,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi2_3",
+          "name": "Dumbbell Bent-Over Row",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 8,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi2_4",
+          "name": "Burpees (Low Impact)",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 30,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 30,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    },
+    {
+      "id": "wk_fat_int_3",
+      "name": "Intermediate - Time-Based Core & Power",
+      "description": "Fat Loss: Squat, Shoulders, Abs",
+      "mode": "circuit",
+      "circuitCycles": 4,
+      "circuitRestSeconds": 60,
+      "createdAt": "2026-10-11T12:00:00.000Z",
+      "exercises": [
+        {
+          "id": "ex_fi3_1",
+          "name": "Goblet Squat",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 12,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi3_2",
+          "name": "Dumbbell Overhead Press",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 6,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi3_3",
+          "name": "Cable Face Pulls",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": 10,
+          "autoAdvance": true
+        },
+        {
+          "id": "ex_fi3_4",
+          "name": "Bicycle Crunches",
+          "type": "timebased",
+          "sets": 1,
+          "reps": "MAX",
+          "timebasedIntervalSeconds": 40,
+          "timebasedTotalRounds": 1,
+          "restSeconds": 20,
+          "weight": null,
+          "autoAdvance": true
+        }
+      ],
+      "updatedAt": "2026-10-11T13:34:51.380Z"
+    }
+     ]
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CYBERPUMP // Official Workout Templates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0d14;
+      --card-bg: rgba(18, 22, 34, 0.85);
+      --cyan: #00f0ff;
+      --purple: #8a00ff;
+      --orange: #ff5500;
+      --red: #ff0044;
+      --text: #e0e6ed;
+      --text-muted: #8892b0;
+      --border: rgba(0, 240, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(138, 0, 255, 0.15), transparent 70%),
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+      color: var(--text);
+      font-family: 'Chakra Petch', sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fff;
+      text-shadow: 0 0 15px var(--cyan);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      color: var(--cyan);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .instructions {
+      max-width: 800px;
+      margin: 25px auto 40px;
+      background: rgba(0, 240, 255, 0.05);
+      border: 1px solid var(--cyan);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+    }
+
+    .instructions h3 {
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .instructions ol {
+      margin-left: 20px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .instructions ol strong {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 25px;
+      padding-bottom: 60px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(12px);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--cyan);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .card[data-type="fatloss"] .card-badge {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .card[data-level="advanced"] .card-badge {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* Fixed Image Framing */
+    .card-img-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      position: relative;
+      background: #05060a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .card-img-wrapper:hover .card-img {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    .card-img-wrapper::after {
+      content: '🔍 CLICK TO ENLARGE';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.75);
+      color: var(--cyan);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--cyan);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .card-img-wrapper:hover::after {
+      opacity: 1;
+    }
+
+    .card-header {
+      padding: 20px 20px 10px;
+    }
+
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      color: var(--cyan);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .card-body {
+      padding: 10px 20px 20px;
+      flex-grow: 1;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      padding: 15px 20px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .btn {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #33f3ff;
+      box-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.05);
+    }
+
+    /* Modal Lightbox */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 40px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(5, 6, 10, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      border: 1px solid var(--cyan);
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: var(--cyan);
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+      text-shadow: 0 0 10px var(--cyan);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--cyan);
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-title">CYBERPUMP</div>
+    <div class="brand-subtitle">// OFFICIAL WORKOUT TEMPLATES</div>
+    
+    <div class="instructions">
+      <h3>🚀 HOW TO IMPORT TEMPLATES INTO THE APP:</h3>
+      <ol>
+        <li>Select your desired workout pack below and click <strong>DOWNLOAD .JSON</strong> (or <strong>COPY CODE</strong>).</li>
+        <li>Open <strong>CYBERPUMP</strong> on your iPhone and go to <strong>Export & Import</strong> (📤 icon).</li>
+        <li>Load the file using <strong>Pick File</strong>, or paste the copied string into the box and tap <strong>Preview & Select</strong>.</li>
+      </ol>
+    </div>
+  </header>
+
+  <div class="container" id="templates-grid">
+    <!-- Grid items rendered via JS -->
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <div id="toast" class="toast">JSON Code copied to clipboard!</div>
+
+  <script>
+    const templates = [
+      {
+        title: "Beginner Hypertrophy",
+        subtitle: "Full Body Foundations",
+        badge: "HYPERTROPHY // L1",
+        image: "template/Beginner Hypertrophy.jpg",
+        jsonFile: "template/Beginner Hypertrophy.json",
+        type: "hypertrophy",
+        level: "beginner",
+        description: "3-day full body routine designed to build foundational strength, technique, and muscle mass."
+      },
+      {
+        title: "Intermediate Hypertrophy",
+        subtitle: "Push / Pull / Legs Split",
+        badge: "HYPERTROPHY // L2",
+        image: "template/Intermediate Hypertrophy.jpg",
+        jsonFile: "template/Intermediate Hypertrophy.json",
+        type: "hypertrophy",
+        level: "intermediate",
+        description: "3-day Push / Pull / Legs split with higher volume per muscle group for maximum growth."
+      },
+      {
+        title: "Advanced Hypertrophy",
+        subtitle: "Upper / Lower Heavy Density",
+        badge: "HYPERTROPHY // L3",
+        image: "template/Advanced Hypertrophy.jpg",
+        jsonFile: "template/Advanced Hypertrophy.json",
+        type: "hypertrophy",
+        level: "advanced",
+        description: "High-intensity heavy upper/lower routine with training sets taken close to muscle failure."
+      },
+      {
+        title: "Beginner Fat Loss",
+        subtitle: "Total Body Circuits",
+        badge: "FAT LOSS // L1",
+        image: "template/Beginner Fat Loss.jpg",
+        jsonFile: "template/Beginner Fat Loss.json",
+        type: "fatloss",
+        level: "beginner",
+        description: "Reps-based total body circuits engineered to elevate heart rate without excessive fatigue."
+      },
+      {
+        title: "Intermediate Fat Loss",
+        subtitle: "Time-Based Intervals",
+        badge: "FAT LOSS // L2",
+        image: "template/Intermediate Fat Loss.jpg",
+        jsonFile: "template/Intermediate Fat Loss.json",
+        type: "fatloss",
+        level: "intermediate",
+        description: "Fixed interval work periods with short rest intervals for sustained metabolic output."
+      },
+      {
+        title: "Advanced Fat Loss",
+        subtitle: "High-Intensity Metcon",
+        badge: "FAT LOSS // L3",
+        image: "template/Advanced Fat Loss.jpg",
+        jsonFile: "template/Advanced Fat Loss.json",
+        type: "fatloss",
+        level: "advanced",
+        description: "High-intensity free weight & cardio circuits designed for maximum post-workout EPOC burn."
+      }
+    ];
+
+    const grid = document.getElementById('templates-grid');
+
+    templates.forEach(tpl => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.setAttribute('data-type', tpl.type);
+      card.setAttribute('data-level', tpl.level);
+
+      card.innerHTML = `
+        <span class="card-badge">${tpl.badge}</span>
+        <div class="card-img-wrapper" onclick="openModal('${tpl.image}')">
+          <img src="${tpl.image}" alt="${tpl.title}" class="card-img" onerror="this.src='https://via.placeholder.com/600x350/0d0d12/00f0ff?text=CYBERPUMP'">
+        </div>
+        <div class="card-header">
+          <div class="card-title">${tpl.title}</div>
+          <div class="card-subtitle">${tpl.subtitle}</div>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">${tpl.description}</p>
+        </div>
+        <div class="card-footer">
+          <a href="${tpl.jsonFile}" download class="btn btn-primary">
+            💾 DOWNLOAD
+          </a>
+          <button class="btn btn-secondary" onclick="copyJsonFromPath('${tpl.jsonFile}')">
+            📋 COPY CODE
+          </button>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    // Copy JSON file contents to clipboard
+    async function copyJsonFromPath(filePath) {
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error("Could not load JSON file");
+        const jsonText = await response.text();
+        await navigator.clipboard.writeText(jsonText);
+        showToast("JSON Code copied to clipboard! Paste it into CYBERPUMP.");
+      } catch (err) {
+        showToast("Error loading file. Check your file path.");
+        console.error(err);
+      }
+    }
+
+    // Modal Lightbox functions
+    function openModal(imgSrc) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
