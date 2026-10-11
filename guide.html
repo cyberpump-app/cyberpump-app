@@ -4,6 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CYBERPUMP // Official User Manual & Features Guide</title>
+  
+  <!-- Meta tag Open Graph per WhatsApp, Telegram, Facebook e Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CYBERPUMP // Workout Hub & Web Builder" />
+  <meta property="og:description" content="Crea e personalizza le tue schede sul web, scarica i template in JSON e importa i tuoi allenamenti al volo sull'app." />
+  <meta property="og:image" content="cyberpump_banner.jpg" />
+
+  <!-- Meta tag per Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CYBERPUMP // Workout Hub & Web Builder" />
+  <meta name="twitter:description" content="Crea i tuoi allenamenti sul web e importali all'istante sull'app." />
+  <meta name="twitter:image" content="cyberpump_banner.jpg" />
+
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Orbitron:wght@600;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -43,7 +56,6 @@
       margin: 0 auto;
     }
 
-    /* Top Language Switcher */
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -63,9 +75,7 @@
       transition: all 0.2s ease;
     }
 
-    .back-link:hover {
-      text-shadow: 0 0 8px var(--cyan);
-    }
+    .back-link:hover { text-shadow: 0 0 8px var(--cyan); }
 
     .lang-select {
       background: rgba(18, 22, 34, 0.95);
@@ -81,12 +91,8 @@
       box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
     }
 
-    .lang-select option {
-      background: #0b0d14;
-      color: #fff;
-    }
+    .lang-select option { background: #0b0d14; color: #fff; }
 
-    /* Header */
     header {
       text-align: center;
       margin-bottom: 30px;
@@ -110,7 +116,6 @@
       font-weight: 600;
     }
 
-    /* Intro Card */
     .intro-banner {
       background: rgba(0, 240, 255, 0.05);
       border: 1px solid var(--cyan);
@@ -135,7 +140,6 @@
       line-height: 1.6;
     }
 
-    /* Feature Sections */
     .feature-section {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -150,9 +154,7 @@
       align-items: center;
     }
 
-    .feature-section.alt-layout {
-      grid-template-columns: 360px 1fr;
-    }
+    .feature-section.alt-layout { grid-template-columns: 360px 1fr; }
 
     .feature-section.pump-theme {
       border-color: rgba(255, 0, 127, 0.4);
@@ -170,16 +172,9 @@
       gap: 10px;
     }
 
-    .feature-content p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-    }
+    .feature-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; }
 
-    .feature-bullets {
-      list-style: none;
-      padding: 0;
-    }
+    .feature-bullets { list-style: none; padding: 0; }
 
     .feature-bullets li {
       font-size: 0.9rem;
@@ -198,7 +193,6 @@
       flex-shrink: 0;
     }
 
-    /* CSS App UI Mockup Components */
     .mockup-container {
       width: 100%;
       background: #090c10;
@@ -261,11 +255,7 @@
       color: var(--lime);
     }
 
-    .metric-label {
-      font-size: 9px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-    }
+    .metric-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; }
 
     .btn-mock {
       display: flex;
@@ -307,7 +297,6 @@
       font-size: 10px;
     }
 
-    /* Rest Overlay Mockup */
     .rest-overlay {
       background: radial-gradient(circle at center, rgba(16, 25, 42, 0.98), rgba(8, 12, 20, 0.99));
       border: 2px solid var(--lime);
@@ -335,7 +324,6 @@
       text-align: left;
     }
 
-    /* Queue Items */
     .queue-item {
       display: flex;
       align-items: center;
@@ -348,20 +336,11 @@
       font-size: 12px;
     }
 
-    .queue-item.active {
-      border-color: var(--cyan);
-      background: rgba(0, 240, 255, 0.08);
-    }
-
-    .queue-item.completed {
-      opacity: 0.5;
-      text-decoration: line-through;
-    }
+    .queue-item.active { border-color: var(--cyan); background: rgba(0, 240, 255, 0.08); }
+    .queue-item.completed { opacity: 0.5; text-decoration: line-through; }
 
     @media (max-width: 768px) {
-      .feature-section, .feature-section.alt-layout {
-        grid-template-columns: 1fr;
-      }
+      .feature-section, .feature-section.alt-layout { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -383,7 +362,6 @@
       <div class="brand-subtitle" id="i18n-guide-title">// APP MANUAL & SYSTEM GUIDE</div>
     </header>
 
-    <!-- INTRO BANNER -->
     <div class="intro-banner">
       <h3 id="i18n-intro-title">⚡ WELCOME TO CYBERPUMP</h3>
       <p id="i18n-intro-desc">
@@ -391,7 +369,7 @@
       </p>
     </div>
 
-    <!-- SECTION 1: STANDARD REP-BASED WORKOUTS & REST PREVIEW -->
+    <!-- SECTION 1 -->
     <div class="feature-section">
       <div class="feature-content">
         <h2 id="i18n-sec1-title">🏋️‍♂️ STANDARD REP-BASED EXERCISES</h2>
@@ -421,7 +399,6 @@
         </ul>
       </div>
 
-      <!-- MOCKUP: Standard Card + Rest Overlay -->
       <div class="mockup-container">
         <div class="active-player-card" style="margin-bottom: 12px;">
           <span class="exercise-badge">STANDARD SET • SET 1 OF 3</span>
@@ -443,7 +420,6 @@
           <button class="btn-mock btn-mock-success">✅ Complete Set (1/3)</button>
         </div>
 
-        <!-- Mini Rest Preview -->
         <div class="rest-overlay">
           <span style="font-size: 10px; font-weight: 800; color: var(--lime); letter-spacing: 1px;">⏸️ REST & RECOVER</span>
           <div class="rest-timer-display">45s</div>
@@ -461,9 +437,8 @@
       </div>
     </div>
 
-    <!-- SECTION 2: TIME-BASED EXERCISES & INTERVALS -->
+    <!-- SECTION 2 -->
     <div class="feature-section alt-layout">
-      <!-- MOCKUP: Time-based Active Interval -->
       <div class="mockup-container">
         <div class="active-player-card" style="border-color: var(--magenta); box-shadow: 0 0 20px rgba(255, 0, 127, 0.25);">
           <span class="exercise-badge" style="background: rgba(255, 0, 127, 0.2); color: var(--magenta);">⚡ TIME-BASED • ROUND 2 OF 5</span>
@@ -516,7 +491,7 @@
       </div>
     </div>
 
-    <!-- SECTION 3: AUTO-START & TRANSITIONS -->
+    <!-- SECTION 3 -->
     <div class="feature-section">
       <div class="feature-content">
         <h2 id="i18n-sec3-title">⚡ TRANSITIONS & AUTO-START OPTION</h2>
@@ -539,7 +514,6 @@
         </ul>
       </div>
 
-      <!-- MOCKUP: Transition / Confirm Next Exercise -->
       <div class="mockup-container">
         <div class="active-player-card">
           <span class="exercise-badge">🎯 EXERCISE COMPLETED</span>
@@ -556,9 +530,8 @@
       </div>
     </div>
 
-    <!-- SECTION 4: CIRCUIT EXECUTION MODE -->
+    <!-- SECTION 4 -->
     <div class="feature-section alt-layout">
-      <!-- MOCKUP: Circuit Queue -->
       <div class="mockup-container">
         <div style="border: 1px solid var(--cyan); border-radius: 12px; padding: 12px; background: rgba(0, 240, 255, 0.04);">
           <div style="font-size: 11px; color: var(--cyan); font-weight: 700; margin-bottom: 8px;">🔄 CIRCUIT QUEUE (3 CYCLES)</div>
@@ -611,7 +584,7 @@
       </div>
     </div>
 
-    <!-- SECTION 5: PUMP OVERDRIVE MODE (CONDENSED) -->
+    <!-- SECTION 5 -->
     <div class="feature-section pump-theme">
       <div class="feature-content">
         <h2 style="color: var(--magenta);" id="i18n-sec5-title">⚡ PUMP OVERDRIVE MODE</h2>
@@ -622,7 +595,6 @@
         </ul>
       </div>
 
-      <!-- MOCKUP: PUMP Mode Card -->
       <div class="mockup-container">
         <div class="active-player-card" style="border-color: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.35);">
           <span class="exercise-badge" style="background: rgba(255, 0, 127, 0.25); color: #ff007f;">⚡ PUMP OVERDRIVE ACTIVE</span>
@@ -655,7 +627,6 @@
         guideTitle: "// APP MANUAL & SYSTEM GUIDE",
         introTitle: "⚡ WELCOME TO CYBERPUMP",
         introDesc: "CYBERPUMP is a mobile workout tracking application designed for maximum flexibility. You can build custom training routines from scratch using our Web Builder or in-app editor, or import pre-made JSON workout templates directly to start training immediately.",
-        
         sec1Title: "🏋️‍♂️ STANDARD REP-BASED EXERCISES",
         sec1Desc: "Standard exercises are structured around sets, reps, and defined rest periods. CYBERPUMP acts as your automatic training assistant.",
         sec1B1Title: "Execution & Set Completion:",
@@ -664,7 +635,6 @@
         sec1B2Text: "During recovery, CYBERPUMP displays a prominent 'Next Up' preview banner telling you exactly which exercise, set number, weight, and target reps are coming up next, so you can prepare your equipment ahead of time.",
         sec1B3Title: "On-The-Fly Controls:",
         sec1B3Text: "Need extra recovery time? Tap '+10s' to extend the rest. Tap 'Skip Rest' to jump straight to the next set.",
-
         sec2Title: "⏱️ TIME-BASED EXERCISES & INTERVALS",
         sec2Desc: "For isometric holds, HIIT, or timed intervals, CYBERPUMP manages active work duration and recovery periods completely hands-free.",
         sec2B1Title: "Active Work Countdown:",
@@ -673,21 +643,18 @@
         sec2B2Text: "If rest is configured to 0s for a time-based exercise, the next interval or exercise starts immediately without stopping to confirm.",
         sec2B3Title: "Hands-Free Automation:",
         sec2B3Text: "Interval rounds auto-advance sequentially so you never have to touch your phone during high-intensity training.",
-
         sec3Title: "⚡ TRANSITIONS & AUTO-START OPTION",
         sec3Desc: "Control how CYBERPUMP moves from one exercise to the next in your routine.",
         sec3B1Title: "Manual Confirmation Screen (Auto-Start OFF):",
         sec3B1Text: "When completing an exercise, CYBERPUMP displays a 'Get Ready' screen showing the next exercise, target reps, and weight. Tap 'Start Next Exercise' when you are ready.",
         sec3B2Title: "Auto-Start Enabled (Skip Confirmation):",
         sec3B2Text: "Enable ⚡ Auto-start on an exercise to skip the confirmation screen entirely. The next exercise starts instantly—ideal for warm-up flows, mobility drills, or seamless supersets where every exercise must follow immediately without user input.",
-
         sec4Title: "🔄 CIRCUIT EXECUTION MODE",
         sec4Desc: "Switch your entire workout into a continuous circuit structure with dedicated cycle rest intervals.",
         sec4B1Title: "Sequential Cycling:",
         sec4B1Text: "In Circuit Mode, you run through exercise 1, then exercise 2, then exercise 3 sequentially for your chosen number of cycles (e.g. 3 cycles).",
         sec4B2Title: "Rest Between Full Cycles:",
         sec4B2Text: "You can set short rest periods between individual exercises and a longer dedicated recovery break (e.g. 90s) between full circuit cycles. During cycle rest, CYBERPUMP previews the first exercise of the upcoming cycle.",
-
         sec5Title: "⚡ PUMP OVERDRIVE MODE",
         sec5Desc: "An optional high-energy visual and audio theme for maximum intensity training sessions.",
         sec5B1Title: "High-Intensity Focus:",
@@ -700,7 +667,6 @@
         guideTitle: "// MANUALE UTENTE & FUNZIONALITÀ",
         introTitle: "⚡ BENVENUTO IN CYBERPUMP",
         introDesc: "CYBERPUMP è un'applicazione per il tracciamento degli allenamenti creata per la massima flessibilità. Puoi creare la tua scheda di allenamento personalizzata da zero usando il nostro Web Builder o l'editor dell'app, oppure importare direttamente i template JSON di esempio per iniziare subito ad allenarti.",
-        
         sec1Title: "🏋️‍♂️ ESERCIZI A SERIE E RIPETIZIONI",
         sec1Desc: "Gli esercizi standard sono strutturati su serie, ripetizioni e tempi di recupero definiti. CYBERPUMP gestisce il tuo allenamento in automatico.",
         sec1B1Title: "Esecuzione e Chiusura Serie:",
@@ -709,7 +675,6 @@
         sec1B2Text: "Durante la pausa di recupero, CYBERPUMP mostra un banner 'Prossimo Esercizio' ben visibile che ti indica esattamente quale esercizio, numero di serie, peso e ripetizioni ti aspettano subito dopo, permettendoti di preparare gli attrezzi in anticipo.",
         sec1B3Title: "Controlli al Volo:",
         sec1B3Text: "Serve più recupero? Tocca '+10s' durante il riposo. Tocca 'Skip Rest' per passare subito alla serie successiva.",
-
         sec2Title: "⏱️ ESERCIZI A TEMPO & INTERVAL TRAINING",
         sec2Desc: "Per tenute isometriche, HIIT o intervalli, CYBERPUMP gestisce la durata del lavoro attivo e del riposo senza dover toccare il telefono.",
         sec2B1Title: "Conto alla Rovescia del Lavoro:",
@@ -718,21 +683,18 @@
         sec2B2Text: "Se imposti la pausa a 0s in un esercizio a tempo, l'intervallo o l'esercizio successivo parte immediatamente senza fermarsi a chiedere conferme.",
         sec2B3Title: "Automazione Hands-Free:",
         sec2B3Text: "I round degli intervalli avanzano da soli in sequenza per non farti distrarre durante gli allenamenti ad alta intensità.",
-
         sec3Title: "⚡ TRANSIZIONI & OPZIONE AUTO-START",
         sec3Desc: "Controlla come CYBERPUMP passa da un esercizio all'altro all'interno del tuo programma.",
         sec3B1Title: "Schermata di Conferma Manuale (Auto-Start OFF):",
         sec3B1Text: "Al completamento di un esercizio, CYBERPUMP mostra la schermata 'Get Ready' con l'esercizio successivo, rep e peso target. Tocca 'Start Next Exercise' quando sei pronto.",
         sec3B2Title: "Auto-Start Attivo (Salta Conferma):",
         sec3B2Text: "Attiva ⚡ Auto-start su un esercizio per saltare la schermata di conferma. L'esercizio successivo parte all'istante: perfetto per riscaldamenti, mobilità o superset in cui ogni esercizio deve seguire l'altro senza pause o interventi dell'utente.",
-
         sec4Title: "🔄 MODALITÀ CIRCUITO",
         sec4Desc: "Trasforma l'intero allenamento in un circuito continuo con pause di recupero dedicate tra i cicli.",
         sec4B1Title: "Esecuzione Sequenziale:",
         sec4B1Text: "In Modalità Circuito esegui l'esercizio 1, poi il 2, poi il 3 in sequenza continua per il numero di cicli impostato (es. 3 cicli).",
         sec4B2Title: "Riposo tra i Cicli Completi:",
         sec4B2Text: "Puoi impostare brevi pause tra i singoli esercizi e un recupero più lungo (es. 90s) al termine di ogni giro completo del circuito, durante il quale CYBERPUMP mostra in anteprima il primo esercizio del ciclo in arrivo.",
-
         sec5Title: "⚡ MODALITÀ PUMP OVERDRIVE",
         sec5Desc: "Un tema opzionale ad alta energia visiva e sonora per sessioni ad altissima intensità.",
         sec5B1Title: "Focus ad Alta Intensità:",
@@ -745,7 +707,6 @@
         guideTitle: "// MANUAL DE USUARIO Y FUNCIONES",
         introTitle: "⚡ BIENVENIDO A CYBERPUMP",
         introDesc: "CYBERPUMP es una aplicación de seguimiento de entrenamiento diseñada para la máxima flexibilidad. Puedes crear tus propias rutinas personalizadas desde cero usando nuestro Web Builder o el editor de la app, o importar directamente plantillas de ejemplo en formato JSON para empezar a entrenar inmediatamente.",
-        
         sec1Title: "🏋️‍♂️ EJERCICIOS POR SERIES Y REPETICIONES",
         sec1Desc: "Los ejercicios estándar se estructuran en series, repeticiones y descansos definidos. CYBERPUMP gestiona tu entrenamiento automáticamente.",
         sec1B1Title: "Ejecución y Cierre de Serie:",
@@ -754,7 +715,6 @@
         sec1B2Text: "Durante el descanso, CYBERPUMP muestra un banner destacado 'Next Up' que te indica exactamente qué ejercicio, número de serie, peso y repeticiones vienen a continuación, para que puedas preparar tu equipo con antelación.",
         sec1B3Title: "Controles al Momento:",
         sec1B3Text: "¿Necesitas más recuperación? Toca '+10s' durante el descanso. Toca 'Skip Rest' para saltar directamente a la siguiente serie.",
-
         sec2Title: "⏱️ EJERCICIOS POR TIEMPO E INTERVALOS",
         sec2Desc: "Para isométricos, HIIT u holguras por tiempo, CYBERPUMP gestiona la duración del trabajo y descanso de forma totalmente manos libres.",
         sec2B1Title: "Conteo de Trabajo Activo:",
@@ -763,21 +723,18 @@
         sec2B2Text: "Si fijas el descanso en 0s en un ejercicio por tiempo, el siguiente intervalo empieza inmediatamente sin detenerse a pedir confirmación.",
         sec2B3Title: "Automatización Manos Libres:",
         sec2B3Text: "Las rondas avanzan automáticamente para que no tengas que tocar el teléfono durante entrenamientos intensos.",
-
         sec3Title: "⚡ TRANSICIONES Y OPCIÓN AUTO-START",
         sec3Desc: "Controla cómo CYBERPUMP pasa de un ejercicio al siguiente en tu rutina.",
         sec3B1Title: "Confirmación Manual (Auto-Start OFF):",
         sec3B1Text: "Al terminar un ejercicio, CYBERPUMP muestra la pantalla 'Get Ready' con el siguiente ejercicio, reps y peso target. Toca 'Start Next Exercise' cuando estés listo.",
         sec3B2Title: "Auto-Start Activado (Saltar Confirmación):",
         sec3B2Text: "Activa ⚡ Auto-start en un ejercicio para saltar la confirmación. El siguiente ejercicio empieza al instante: ideal para calentamientos donde cada ejercicio debe seguir inmediatamente sin intervención del usuario.",
-
         sec4Title: "🔄 MODO CIRCUITO",
         sec4Desc: "Convierte todo tu entrenamiento en un circuito continuo con descansos dedicados entre ciclos.",
         sec4B1Title: "Ejecución Secuencial:",
         sec4B1Text: "En Modo Circuito ejecutas el ejercicio 1, luego el 2, luego el 3 de forma secuencial durante el número de ciclos elegido (ej. 3 ciclos).",
         sec4B2Title: "Descanso entre Ciclos Completos:",
         sec4B2Text: "Puedes fijar descansos cortos entre ejercicios individuales y una pausa más larga (ej. 90s) al completar cada vuelta al circuito, durante la cual CYBERPUMP te muestra el primer ejercicio del siguiente ciclo.",
-
         sec5Title: "⚡ MODO PUMP OVERDRIVE",
         sec5Desc: "Un tema opcional de alta energía visual y sonora para sesiones de máxima intensidad.",
         sec5B1Title: "Enfoque de Alta Intensidad:",
@@ -792,10 +749,8 @@
     function getAutoLanguage() {
       const saved = localStorage.getItem('cyberpump_lang');
       if (saved && ['en', 'it', 'es'].includes(saved)) return saved;
-
       const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
       if (['it', 'es'].includes(browserLang)) return browserLang;
-
       return 'en';
     }
 

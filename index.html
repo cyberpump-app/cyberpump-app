@@ -4,6 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CYBERPUMP // Workout Routines & Web Builder</title>
+  
+  <!-- Meta tag Open Graph per WhatsApp, Telegram, Facebook e Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CYBERPUMP // Workout Hub & Web Builder" />
+  <meta property="og:description" content="Crea e personalizza le tue schede sul web, scarica i template in JSON e importa i tuoi allenamenti al volo sull'app." />
+  <meta property="og:image" content="cyberpump_banner.jpg" />
+
+  <!-- Meta tag per Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CYBERPUMP // Workout Hub & Web Builder" />
+  <meta name="twitter:description" content="Crea i tuoi allenamenti sul web e importali all'istante sull'app." />
+  <meta name="twitter:image" content="cyberpump_banner.jpg" />
+
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -19,11 +32,7 @@
       --border: rgba(0, 240, 255, 0.2);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background-color: var(--bg-color);
@@ -46,7 +55,6 @@
       position: relative;
     }
 
-    /* Language Switcher Dropdown */
     .lang-switcher-container {
       display: flex;
       justify-content: flex-end;
@@ -68,14 +76,8 @@
       transition: all 0.3s ease;
     }
 
-    .lang-select:hover {
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
-    }
-
-    .lang-select option {
-      background: #0b0d14;
-      color: #fff;
-    }
+    .lang-select:hover { box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); }
+    .lang-select option { background: #0b0d14; color: #fff; }
 
     .brand-title {
       font-family: 'Orbitron', sans-serif;
@@ -96,13 +98,28 @@
       font-weight: 600;
     }
 
-    /* Store Download Badges System */
+    /* BANNER STYLES */
+    .banner-container {
+      max-width: 950px;
+      margin: 20px auto 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--cyan);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .app-stores-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 15px;
-      margin-top: 25px;
+      margin-top: 20px;
       margin-bottom: 10px;
       flex-wrap: wrap;
     }
@@ -156,10 +173,9 @@
       letter-spacing: 0.5px;
     }
 
-    /* Top Hub Choice Section (2 Columns: Manual & Builder) */
     .hub-intro {
       max-width: 950px;
-      margin: 30px auto 25px;
+      margin: 25px auto 25px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
@@ -247,7 +263,6 @@
       color: #fff;
     }
 
-    /* INSTRUCTIONS & WORKOUT ROUTINES CONTAINER */
     .instructions {
       max-width: 950px;
       margin: 0 auto 30px;
@@ -274,11 +289,8 @@
       font-size: 0.95rem;
     }
 
-    .instructions ol strong {
-      color: #fff;
-    }
+    .instructions ol strong { color: #fff; }
 
-    /* CYBERPUMP SELECTOR BOX (LEVEL + GOAL) */
     .template-selector-box {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -330,11 +342,7 @@
       background-color: rgba(18, 22, 34, 0.98);
     }
 
-    .cyber-select option {
-      background: #0b0d14;
-      color: #fff;
-      padding: 10px;
-    }
+    .cyber-select option { background: #0b0d14; color: #fff; padding: 10px; }
 
     .container {
       max-width: 1300px;
@@ -345,22 +353,6 @@
       padding-bottom: 60px;
     }
 
-    /* Empty Selection Placeholder */
-    .empty-selection-placeholder {
-      grid-column: 1 / -1;
-      max-width: 800px;
-      margin: 20px auto;
-      background: rgba(18, 22, 34, 0.6);
-      border: 1px dashed var(--border);
-      border-radius: 12px;
-      padding: 40px 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 1rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Smooth Fade-In Animation for Cards */
     @keyframes fadeInCard {
       from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
@@ -401,17 +393,9 @@
       z-index: 2;
     }
 
-    .card[data-type="fatloss"] .card-badge {
-      border-color: var(--orange);
-      color: var(--orange);
-    }
+    .card[data-type="fatloss"] .card-badge { border-color: var(--orange); color: var(--orange); }
+    .card[data-level="advanced"] .card-badge { border-color: var(--red); color: var(--red); }
 
-    .card[data-level="advanced"] .card-badge {
-      border-color: var(--red);
-      color: var(--red);
-    }
-
-    /* Fixed Image Framing */
     .card-img-wrapper {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -455,13 +439,8 @@
       pointer-events: none;
     }
 
-    .card-img-wrapper:hover::after {
-      opacity: 1;
-    }
-
-    .card-header {
-      padding: 20px 20px 10px;
-    }
+    .card-img-wrapper:hover::after { opacity: 1; }
+    .card-header { padding: 20px 20px 10px; }
 
     .card-title {
       font-family: 'Orbitron', sans-serif;
@@ -479,16 +458,8 @@
       font-weight: 600;
     }
 
-    .card-body {
-      padding: 10px 20px 20px;
-      flex-grow: 1;
-    }
-
-    .card-desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
+    .card-body { padding: 10px 20px 20px; flex-grow: 1; }
+    .card-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
 
     .card-footer {
       padding: 15px 20px 20px;
@@ -540,16 +511,13 @@
       background: rgba(0, 240, 255, 0.05);
     }
 
-    /* Modal Lightbox */
     .modal {
       display: none;
       position: fixed;
       z-index: 1000;
       padding-top: 40px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
       overflow: auto;
       background-color: rgba(5, 6, 10, 0.95);
       backdrop-filter: blur(10px);
@@ -568,8 +536,7 @@
 
     .modal-close {
       position: absolute;
-      top: 15px;
-      right: 35px;
+      top: 15px; right: 35px;
       color: var(--cyan);
       font-size: 40px;
       font-weight: bold;
@@ -577,15 +544,11 @@
       cursor: pointer;
     }
 
-    .modal-close:hover {
-      color: #fff;
-      text-shadow: 0 0 10px var(--cyan);
-    }
+    .modal-close:hover { color: #fff; text-shadow: 0 0 10px var(--cyan); }
 
     .toast {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 20px; right: 20px;
       background: var(--cyan);
       color: #000;
       padding: 12px 24px;
@@ -598,10 +561,7 @@
       z-index: 999;
     }
 
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    .toast.show { transform: translateY(0); opacity: 1; }
   </style>
 </head>
 <body>
@@ -618,9 +578,13 @@
     <div class="brand-title">CYBERPUMP</div>
     <div class="brand-subtitle" id="i18n-brand-subtitle">// WORKOUT HUB & BUILDER</div>
     
-    <!-- OFFICIAL APP STORE DOWNLOADS -->
+    <!-- MAIN HERO BANNER -->
+    <div class="banner-container">
+      <img src="cyberpump_banner.jpg" alt="CYBERPUMP Banner" class="hero-banner">
+    </div>
+
+    <!-- APP STORE BUTTONS -->
     <div class="app-stores-wrapper">
-      <!-- App Store iOS -->
       <a href="https://apps.apple.com/us/app/cyberpump/id6806326827" target="_blank" rel="noopener noreferrer" class="store-btn" title="Download on iOS App Store">
         <svg viewBox="0 0 384 512">
           <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-12 69.5-34.3z"/>
@@ -631,7 +595,6 @@
         </div>
       </a>
 
-      <!-- Google Play Android -->
       <a href="https://play.google.com/store/apps/details?id=com.cyberpump.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-btn" title="Get it on Google Play">
         <svg viewBox="0 0 512 512">
           <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/>
@@ -643,7 +606,6 @@
       </a>
     </div>
     
-    <!-- TOP CARDS: MANUAL (1st) & WEB BUILDER (2nd) -->
     <div class="hub-intro">
       <div class="hub-card guide-card">
         <div>
@@ -666,19 +628,17 @@
       </div>
     </div>
 
-    <!-- WORKOUT ROUTINES & GUIDED SELECTOR BOX -->
     <div class="instructions">
       <h3 id="i18n-hub-templates-title" style="margin-bottom: 8px;">📦 WORKOUT ROUTINES</h3>
       <p id="i18n-hub-templates-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
-        Select your level and goal below to reveal your custom <strong>workout template</strong>. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.
+        Select your level and goal below to filter workout templates. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.
       </p>
 
-      <!-- GUIDED SELECTION DROPDOWNS -->
       <div class="template-selector-box">
         <div class="selector-group">
           <label id="i18n-lbl-level" class="selector-label">1. SELECT YOUR LEVEL:</label>
           <select id="selectLevel" class="cyber-select">
-            <option value="" id="i18n-opt-level-prompt">-- Select Level --</option>
+            <option value="all" id="i18n-opt-level-all">All Levels</option>
             <option value="beginner" id="i18n-opt-beginner">Beginner (L1)</option>
             <option value="intermediate" id="i18n-opt-intermediate">Intermediate (L2)</option>
             <option value="advanced" id="i18n-opt-advanced">Advanced (L3)</option>
@@ -688,7 +648,7 @@
         <div class="selector-group">
           <label id="i18n-lbl-goal" class="selector-label">2. SELECT YOUR GOAL:</label>
           <select id="selectGoal" class="cyber-select">
-            <option value="" id="i18n-opt-goal-prompt">-- Select Goal --</option>
+            <option value="all" id="i18n-opt-goal-all">All Goals</option>
             <option value="hypertrophy" id="i18n-opt-hypertrophy">🏋️‍♂️ Hypertrophy</option>
             <option value="fatloss" id="i18n-opt-fatloss">🔥 Fat Loss</option>
           </select>
@@ -697,18 +657,15 @@
 
       <h3 id="i18n-instructions-title" style="border-top: 1px dashed var(--border); padding-top: 16px; margin-top: 20px;">📋 HOW TO IMPORT INTO THE APP:</h3>
       <ol style="margin-top: 8px;">
-        <li id="i18n-step-1">Select your <strong>Level</strong> and <strong>Goal</strong> above to display your workout template.</li>
+        <li id="i18n-step-1">Select your <strong>Level</strong> and <strong>Goal</strong> above to filter your workout template.</li>
         <li id="i18n-step-2">Click <strong>DOWNLOAD</strong> to save the `.JSON` file or <strong>COPY CODE</strong> to copy the string.</li>
         <li id="i18n-step-3">Open <strong>CYBERPUMP</strong> on your phone, go to <strong>Export & Import</strong> (📤 icon), and tap <strong>Pick File</strong> or paste the text string.</li>
       </ol>
     </div>
   </header>
 
-  <div class="container" id="templates-grid">
-    <!-- Grid items rendered via JS after user selection -->
-  </div>
+  <div class="container" id="templates-grid"></div>
 
-  <!-- Image Lightbox Modal -->
   <div id="imageModal" class="modal" onclick="closeModal()">
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="modalImg">
@@ -729,21 +686,20 @@
         hubBuilderDesc: "Build and customize your routines from scratch using our interactive Web Builder.",
         btnBuilder: "⚡ LAUNCH WEB BUILDER",
         hubTemplatesTitle: "📦 WORKOUT ROUTINES",
-        hubTemplatesDesc: "Select your level and goal below to reveal your custom <strong>workout template</strong>. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.",
+        hubTemplatesDesc: "Select your level and goal below to filter workout templates. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.",
         lblLevel: "1. SELECT YOUR LEVEL:",
-        optLevelPrompt: "-- Select Level --",
+        optLevelAll: "All Levels",
         optBeginner: "Beginner (L1)",
         optIntermediate: "Intermediate (L2)",
         optAdvanced: "Advanced (L3)",
         lblGoal: "2. SELECT YOUR GOAL:",
-        optGoalPrompt: "-- Select Goal --",
+        optGoalAll: "All Goals",
         optHypertrophy: "🏋️‍♂️ Hypertrophy",
         optFatloss: "🔥 Fat Loss",
         instructionsTitle: "📋 HOW TO IMPORT INTO THE APP:",
-        step1: "Select your <strong>Level</strong> and <strong>Goal</strong> above to display your workout template.",
+        step1: "Select your <strong>Level</strong> and <strong>Goal</strong> above to filter workout templates.",
         step2: "Click <strong>DOWNLOAD</strong> to save the `.JSON` file or <strong>COPY CODE</strong> to copy the string.",
         step3: "Open <strong>CYBERPUMP</strong> on your phone, go to <strong>Export & Import</strong> (📤 icon), and tap <strong>Pick File</strong> or paste the text string.",
-        emptySelectionMsg: "⚡ Select both your Level and Goal above to display your workout template.",
         btnDownload: "💾 DOWNLOAD",
         btnCopy: "📋 COPY CODE",
         enlargeText: "🔍 CLICK TO ENLARGE",
@@ -761,21 +717,20 @@
         hubBuilderDesc: "Crea e personalizza le tue schede da zero configurando comodi esercizi, serie, rep e timer.",
         btnBuilder: "⚡ AVVIA WEB BUILDER",
         hubTemplatesTitle: "📦 SCHEDE DI ALLENAMENTO",
-        hubTemplatesDesc: "Seleziona il tuo livello e il tuo obiettivo qui sotto per visualizzare il <strong>template di allenamento</strong> su misura per te. Scarica il file <strong>.JSON</strong> o copia il codice in CYBERPUMP.",
+        hubTemplatesDesc: "Seleziona il tuo livello e il tuo obiettivo qui sotto per filtrare le schede di allenamento. Scarica il file <strong>.JSON</strong> o copia il codice in CYBERPUMP.",
         lblLevel: "1. SCEGLI IL TUO LIVELLO:",
-        optLevelPrompt: "-- Seleziona Livello --",
+        optLevelAll: "Tutti i Livelli",
         optBeginner: "Principiante (L1)",
         optIntermediate: "Intermedio (L2)",
         optAdvanced: "Avanzato (L3)",
         lblGoal: "2. SCEGLI IL TUO OBIETTIVO:",
-        optGoalPrompt: "-- Seleziona Obiettivo --",
+        optGoalAll: "Tutti gli Obiettivi",
         optHypertrophy: "🏋️‍♂️ Ipertrofia",
         optFatloss: "🔥 Dimagrimento",
         instructionsTitle: "📋 COME IMPORTARE NELL'APP:",
-        step1: "Seleziona il tuo <strong>Livello</strong> e <strong>Obiettivo</strong> in alto per sbloccare la tua scheda.",
+        step1: "Seleziona il tuo <strong>Livello</strong> e <strong>Obiettivo</strong> in alto per filtrare le schede.",
         step2: "Clicca su <strong>SCARICA</strong> per salvare il file `.JSON` o su <strong>COPIA CODICE</strong>.",
         step3: "Apri <strong>CYBERPUMP</strong> sul telefono, vai su <strong>Esporta & Importa</strong> (icona 📤) e tocca <strong>Scegli File</strong> o incolla la stringa.",
-        emptySelectionMsg: "⚡ Seleziona sia il tuo Livello che il tuo Obiettivo in alto per visualizzare il tuo template di allenamento.",
         btnDownload: "💾 SCARICA",
         btnCopy: "📋 COPIA CODICE",
         enlargeText: "🔍 CLICCA PER INGRANDIRE",
@@ -793,21 +748,20 @@
         hubBuilderDesc: "Crea y personaliza tus rutinas desde cero configurando fácilmente ejercicios, series, reps y temporizadores.",
         btnBuilder: "⚡ INICIAR WEB BUILDER",
         hubTemplatesTitle: "📦 RUTINAS DE ENTRENAMIENTO",
-        hubTemplatesDesc: "Selecciona tu nivel y objetivo abajo para ver tu <strong>plantilla de entrenamiento</strong> personalizada. Descarga el archivo <strong>.JSON</strong> o copia el código en CYBERPUMP.",
+        hubTemplatesDesc: "Selecciona tu nivel y objetivo abajo para filtrar plantillas de entrenamiento. Descarga el archivo <strong>.JSON</strong> o copia el código en CYBERPUMP.",
         lblLevel: "1. SELECCIONA TU NIVEL:",
-        optLevelPrompt: "-- Seleccionar Nivel --",
+        optLevelAll: "Todos los Niveles",
         optBeginner: "Principiante (L1)",
         optIntermediate: "Intermedio (L2)",
         optAdvanced: "Avanzado (L3)",
         lblGoal: "2. SELECCIONA TU OBJETIVO:",
-        optGoalPrompt: "-- Seleccionar Objetivo --",
+        optGoalAll: "Todos los Objetivos",
         optHypertrophy: "🏋️‍♂️ Hipertrofia",
         optFatloss: "🔥 Pérdida de Grasa",
         instructionsTitle: "📋 CÓMO IMPORTAR EN LA APP:",
-        step1: "Selecciona tu <strong>Nivel</strong> y <strong>Objetivo</strong> arriba para ver tu plantilla.",
+        step1: "Selecciona tu <strong>Nivel</strong> y <strong>Objetivo</strong> arriba para filtrar plantillas.",
         step2: "Haz clic en <strong>DESCARGAR</strong> para guardar el archivo `.JSON` o en <strong>COPIAR CÓDIGO</strong>.",
         step3: "Abre <strong>CYBERPUMP</strong> en tu teléfono, ve a <strong>Exportar e Importar</strong> (icono 📤) y toca <strong>Elegir archivo</strong> o pega el texto.",
-        emptySelectionMsg: "⚡ Selecciona tanto tu Nivel como tu Objetivo arriba para ver tu plantilla de entrenamiento.",
         btnDownload: "💾 DESCARGAR",
         btnCopy: "📋 COPIAR CÓDIGO",
         enlargeText: "🔍 CLIC EN AMPLIAR",
@@ -823,16 +777,8 @@
         jsonFile: "template/Beginner Hypertrophy.json",
         type: "hypertrophy",
         level: "beginner",
-        titles: {
-          en: "Beginner Hypertrophy",
-          it: "Ipertrofia Principianti",
-          es: "Hipertrofia Principiantes"
-        },
-        subtitles: {
-          en: "Full Body Foundations",
-          it: "Fondamenta Full Body",
-          es: "Bases de Cuerpo Completo"
-        },
+        titles: { en: "Beginner Hypertrophy", it: "Ipertrofia Principianti", es: "Hipertrofia Principiantes" },
+        subtitles: { en: "Full Body Foundations", it: "Fondamenta Full Body", es: "Bases de Cuerpo Completo" },
         descriptions: {
           en: "3-day full body routine designed to build foundational strength, technique, and muscle mass.",
           it: "Routine full body di 3 giorni ideata per costruire forza di base, tecnica e massa muscolare.",
@@ -845,16 +791,8 @@
         jsonFile: "template/Intermediate Hypertrophy.json",
         type: "hypertrophy",
         level: "intermediate",
-        titles: {
-          en: "Intermediate Hypertrophy",
-          it: "Ipertrofia Intermedio",
-          es: "Hipertrofia Intermedio"
-        },
-        subtitles: {
-          en: "Push / Pull / Legs Split",
-          it: "Split Push / Pull / Legs",
-          es: "División Push / Pull / Legs"
-        },
+        titles: { en: "Intermediate Hypertrophy", it: "Ipertrofia Intermedio", es: "Hipertrofia Intermedio" },
+        subtitles: { en: "Push / Pull / Legs Split", it: "Split Push / Pull / Legs", es: "División Push / Pull / Legs" },
         descriptions: {
           en: "3-day Push / Pull / Legs split with higher volume per muscle group for maximum growth.",
           it: "Split di 3 giorni Push / Pull / Legs con volume maggiore per gruppo muscolare per massima crescita.",
@@ -867,16 +805,8 @@
         jsonFile: "template/Advanced Hypertrophy.json",
         type: "hypertrophy",
         level: "advanced",
-        titles: {
-          en: "Advanced Hypertrophy",
-          it: "Ipertrofia Avanzato",
-          es: "Hipertrofia Avanzado"
-        },
-        subtitles: {
-          en: "Upper / Lower Heavy Density",
-          it: "Upper / Lower ad Alta Densità",
-          es: "Upper / Lower Alta Densidad"
-        },
+        titles: { en: "Advanced Hypertrophy", it: "Ipertrofia Avanzato", es: "Hipertrofia Avanzado" },
+        subtitles: { en: "Upper / Lower Heavy Density", it: "Upper / Lower ad Alta Densità", es: "Upper / Lower Alta Densidad" },
         descriptions: {
           en: "High-intensity heavy upper/lower routine with training sets taken close to muscle failure.",
           it: "Routine upper/lower ad alta intensità con serie portate vicino al cedimento muscolare.",
@@ -889,16 +819,8 @@
         jsonFile: "template/Beginner Fat Loss.json",
         type: "fatloss",
         level: "beginner",
-        titles: {
-          en: "Beginner Fat Loss",
-          it: "Dimagrimento Principianti",
-          es: "Pérdida de Grasa Principiantes"
-        },
-        subtitles: {
-          en: "Total Body Circuits",
-          it: "Circuiti Total Body",
-          es: "Circuitos Cuerpo Completo"
-        },
+        titles: { en: "Beginner Fat Loss", it: "Dimagrimento Principianti", es: "Pérdida de Grasa Principiantes" },
+        subtitles: { en: "Total Body Circuits", it: "Circuiti Total Body", es: "Circuitos Cuerpo Completo" },
         descriptions: {
           en: "Reps-based total body circuits engineered to elevate heart rate without excessive fatigue.",
           it: "Circuiti a ripetizioni per alzare il battito cardiaco senza affaticamento eccessivo.",
@@ -911,16 +833,8 @@
         jsonFile: "template/Intermediate Fat Loss.json",
         type: "fatloss",
         level: "intermediate",
-        titles: {
-          en: "Intermediate Fat Loss",
-          it: "Dimagrimento Intermedio",
-          es: "Pérdida de Grasa Intermedio"
-        },
-        subtitles: {
-          en: "Time-Based Intervals",
-          it: "Intervalli a Tempo",
-          es: "Intervalos por Tiempo"
-        },
+        titles: { en: "Intermediate Fat Loss", it: "Dimagrimento Intermedio", es: "Pérdida de Grasa Intermedio" },
+        subtitles: { en: "Time-Based Intervals", it: "Intervalli a Tempo", es: "Intervalos por Tiempo" },
         descriptions: {
           en: "Fixed interval work periods with short rest intervals for sustained metabolic output.",
           it: "Periodi di lavoro a intervalli fissi con riposi brevi per un output metabolico costante.",
@@ -933,16 +847,8 @@
         jsonFile: "template/Advanced Fat Loss.json",
         type: "fatloss",
         level: "advanced",
-        titles: {
-          en: "Advanced Fat Loss",
-          it: "Dimagrimento Avanzato",
-          es: "Pérdida de Grasa Avanzado"
-        },
-        subtitles: {
-          en: "High-Intensity Metcon",
-          it: "Metcon ad Alta Intensità",
-          es: "Metcon de Alta Intensidad"
-        },
+        titles: { en: "Advanced Fat Loss", it: "Dimagrimento Avanzato", es: "Pérdida de Grasa Avanzado" },
+        subtitles: { en: "High-Intensity Metcon", it: "Metcon ad Alta Intensità", es: "Metcon de Alta Intensidad" },
         descriptions: {
           en: "High-intensity free weight & cardio circuits designed for maximum post-workout EPOC burn.",
           it: "Circuiti ad alta intensità con pesi liberi e cardio per il massimo consumo calorico post-workout.",
@@ -956,10 +862,8 @@
     function getAutoLanguage() {
       const saved = localStorage.getItem('cyberpump_lang');
       if (saved && ['en', 'it', 'es'].includes(saved)) return saved;
-
       const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
       if (['it', 'es'].includes(browserLang)) return browserLang;
-
       return 'en';
     }
 
@@ -971,7 +875,6 @@
 
       const dict = i18n[lang];
 
-      // Update static header & UI elements
       document.getElementById('i18n-brand-subtitle').textContent = dict.brandSubtitle;
       document.getElementById('i18n-store-ios-sub').textContent = dict.storeIosSub;
       document.getElementById('i18n-store-play-sub').textContent = dict.storePlaySub;
@@ -988,13 +891,13 @@
       document.getElementById('i18n-hub-templates-desc').innerHTML = dict.hubTemplatesDesc;
 
       document.getElementById('i18n-lbl-level').textContent = dict.lblLevel;
-      document.getElementById('i18n-opt-level-prompt').textContent = dict.optLevelPrompt;
+      document.getElementById('i18n-opt-level-all').textContent = dict.optLevelAll;
       document.getElementById('i18n-opt-beginner').textContent = dict.optBeginner;
       document.getElementById('i18n-opt-intermediate').textContent = dict.optIntermediate;
       document.getElementById('i18n-opt-advanced').textContent = dict.optAdvanced;
 
       document.getElementById('i18n-lbl-goal').textContent = dict.lblGoal;
-      document.getElementById('i18n-opt-goal-prompt').textContent = dict.optGoalPrompt;
+      document.getElementById('i18n-opt-goal-all').textContent = dict.optGoalAll;
       document.getElementById('i18n-opt-hypertrophy').textContent = dict.optHypertrophy;
       document.getElementById('i18n-opt-fatloss').textContent = dict.optFatloss;
 
@@ -1011,31 +914,17 @@
       grid.innerHTML = '';
 
       const dict = i18n[currentLang];
-      const selectedLevel = document.getElementById('selectLevel').value;
-      const selectedGoal = document.getElementById('selectGoal').value;
+      const selectedLevel = document.getElementById('selectLevel').value || 'all';
+      const selectedGoal = document.getElementById('selectGoal').value || 'all';
 
-      // Show empty state placeholder until both criteria are chosen
-      if (!selectedLevel || !selectedGoal) {
-        grid.innerHTML = `
-          <div class="empty-selection-placeholder">
-            <span style="font-size: 3rem; display: block; margin-bottom: 12px; filter: drop-shadow(0 0 10px var(--cyan));">🎯</span>
-            <p>${dict.emptySelectionMsg}</p>
-          </div>
-        `;
-        return;
-      }
-
-      // Filter exact matching template
       const filteredTemplates = templates.filter(tpl => {
-        return tpl.level === selectedLevel && tpl.type === selectedGoal;
+        const matchLevel = (selectedLevel === 'all' || tpl.level === selectedLevel);
+        const matchGoal = (selectedGoal === 'all' || tpl.type === selectedGoal);
+        return matchLevel && matchGoal;
       });
 
       if (filteredTemplates.length === 0) {
-        grid.innerHTML = `
-          <div class="empty-selection-placeholder">
-            <p>No template matching your selection was found.</p>
-          </div>
-        `;
+        grid.innerHTML = `<div class="empty-selection-placeholder"><p>No template matching your selection was found.</p></div>`;
         return;
       }
 
@@ -1075,11 +964,9 @@
       });
     }
 
-    // Selectors change events
     document.getElementById('selectLevel').addEventListener('change', renderGrid);
     document.getElementById('selectGoal').addEventListener('change', renderGrid);
 
-    // Copy JSON file contents to clipboard
     async function copyJsonFromPath(filePath) {
       const dict = i18n[currentLang];
       try {
@@ -1094,7 +981,6 @@
       }
     }
 
-    // Modal Lightbox functions
     function openModal(imgSrc) {
       const modal = document.getElementById("imageModal");
       const modalImg = document.getElementById("modalImg");
@@ -1106,25 +992,19 @@
       document.getElementById("imageModal").style.display = "none";
     }
 
-    // Toast Notification
     function showToast(message) {
       const toast = document.getElementById('toast');
       toast.textContent = message;
       toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3000);
+      setTimeout(() => { toast.classList.remove('show'); }, 3000);
     }
 
-    // Init Language Listener
     document.getElementById('langSelect').addEventListener('change', (e) => {
       setLanguage(e.target.value);
     });
 
-    // Auto-detect & Initial Load
     document.addEventListener('DOMContentLoaded', () => {
-      const initialLang = getAutoLanguage();
-      setLanguage(initialLang);
+      setLanguage(getAutoLanguage());
     });
   </script>
 </body>
