@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CYBERPUMP // Official Workout Templates</title>
+  <title>CYBERPUMP // Official Workout Templates & Web Builder</title>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -39,7 +39,7 @@
 
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 30px 20px 10px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -51,7 +51,7 @@
       letter-spacing: 4px;
       color: #fff;
       text-shadow: 0 0 15px var(--cyan);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       text-transform: uppercase;
     }
 
@@ -63,10 +63,78 @@
       font-weight: 600;
     }
 
+    /* Top Hub Choice Section */
+    .hub-intro {
+      max-width: 900px;
+      margin: 30px auto 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .hub-card {
+      background: rgba(18, 22, 34, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      text-align: left;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .hub-card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .hub-card.builder-card {
+      border-color: rgba(138, 0, 255, 0.5);
+      background: rgba(138, 0, 255, 0.08);
+    }
+
+    .hub-card.builder-card:hover {
+      border-color: #a855f7;
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+    }
+
+    .hub-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hub-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .btn-builder {
+      background: linear-gradient(135deg, #a855f7, var(--purple));
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    }
+
+    .btn-builder:hover {
+      background: linear-gradient(135deg, #c084fc, #a855f7);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+      color: #fff;
+    }
+
     .instructions {
-      max-width: 800px;
-      margin: 25px auto 40px;
-      background: rgba(0, 240, 255, 0.05);
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: rgba(0, 240, 255, 0.04);
       border: 1px solid var(--cyan);
       border-radius: 8px;
       padding: 20px;
@@ -79,7 +147,7 @@
       color: var(--cyan);
       font-family: 'Orbitron', sans-serif;
       margin-bottom: 12px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       text-transform: uppercase;
     }
 
@@ -344,14 +412,34 @@
 
   <header>
     <div class="brand-title">CYBERPUMP</div>
-    <div class="brand-subtitle">// OFFICIAL WORKOUT TEMPLATES</div>
+    <div class="brand-subtitle">// WORKOUT HUB & BUILDER</div>
     
+    <div class="hub-intro">
+      <div class="hub-card">
+        <div>
+          <h3>📦 PRE-MADE TEMPLATES</h3>
+          <p>Choose from our official Hypertrophy and Fat Loss routines below. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.</p>
+        </div>
+        <span style="font-size: 0.8rem; color: var(--cyan); font-weight: 700; text-transform: uppercase;">↓ Browse Routine Packs Below</span>
+      </div>
+
+      <div class="hub-card builder-card">
+        <div>
+          <h3>⚙️ OFFICIAL WEB BUILDER</h3>
+          <p>Prefer creating your own routine from scratch? Use our interactive Web Builder to configure exercises, sets, reps, and timers comfortably.</p>
+        </div>
+        <a href="builder.html" class="btn btn-builder">
+          ⚡ LAUNCH WEB BUILDER
+        </a>
+      </div>
+    </div>
+
     <div class="instructions">
-      <h3>🚀 HOW TO IMPORT TEMPLATES INTO THE APP:</h3>
+      <h3>📋 HOW TO IMPORT INTO THE APP:</h3>
       <ol>
-        <li>Select your desired workout pack below and click <strong>DOWNLOAD .JSON</strong> (or <strong>COPY CODE</strong>).</li>
-        <li>Open <strong>CYBERPUMP</strong> on your iPhone and go to <strong>Export & Import</strong> (📤 icon).</li>
-        <li>Load the file using <strong>Pick File</strong>, or paste the copied string into the box and tap <strong>Preview & Select</strong>.</li>
+        <li>Download a <strong>.JSON</strong> file from a template below or export one from the <strong>Web Builder</strong>.</li>
+        <li>Open <strong>CYBERPUMP</strong> on your phone and go to <strong>Export & Import</strong> (📤 icon).</li>
+        <li>Tap <strong>Pick File</strong> to load your downloaded JSON, or paste the text string and tap <strong>Preview & Select</strong>.</li>
       </ol>
     </div>
   </header>
