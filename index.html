@@ -39,9 +39,41 @@
 
     header {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 20px 20px 10px;
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+    }
+
+    /* Language Switcher Dropdown */
+    .lang-switcher-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+
+    .lang-select {
+      background: rgba(18, 22, 34, 0.95);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .lang-select:hover {
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    }
+
+    .lang-select option {
+      background: #0b0d14;
+      color: #fff;
     }
 
     .brand-title {
@@ -61,6 +93,66 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 600;
+    }
+
+    /* Store Download Badges System */
+    .app-stores-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(18, 22, 34, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 18px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .store-btn:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .store-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--cyan);
+      filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.5));
+    }
+
+    .store-btn-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .store-btn-text .small-text {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .store-btn-text .big-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
     }
 
     /* Top Hub Choice Section */
@@ -215,7 +307,6 @@
       color: var(--red);
     }
 
-    /* Fixed Image Framing */
     .card-img-wrapper {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -242,7 +333,7 @@
     }
 
     .card-img-wrapper::after {
-      content: '🔍 CLICK TO ENLARGE';
+      content: attr(data-enlarge-text);
       position: absolute;
       bottom: 8px;
       left: 50%;
@@ -411,35 +502,68 @@
 <body>
 
   <header>
+    <div class="lang-switcher-container">
+      <select id="langSelect" class="lang-select">
+        <option value="en">🌐 English</option>
+        <option value="it">🌐 Italiano</option>
+        <option value="es">🌐 Español</option>
+      </select>
+    </div>
+
     <div class="brand-title">CYBERPUMP</div>
-    <div class="brand-subtitle">// WORKOUT HUB & BUILDER</div>
+    <div class="brand-subtitle" id="i18n-brand-subtitle">// WORKOUT HUB & BUILDER</div>
+    
+    <!-- OFFICIAL APP STORE DOWNLOADS -->
+    <div class="app-stores-wrapper">
+      <!-- App Store iOS -->
+      <a href="https://apps.apple.com/us/app/cyberpump/id6806326827" target="_blank" rel="noopener noreferrer" class="store-btn" title="Download on iOS App Store">
+        <svg viewBox="0 0 384 512">
+          <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-12 69.5-34.3z"/>
+        </svg>
+        <div class="store-btn-text">
+          <span class="small-text" id="i18n-store-ios-sub">Download on the</span>
+          <span class="big-text">App Store</span>
+        </div>
+      </a>
+
+      <!-- Google Play Android -->
+      <a href="https://play.google.com/store/apps/details?id=com.cyberpump.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-btn" title="Get it on Google Play">
+        <svg viewBox="0 0 512 512">
+          <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/>
+        </svg>
+        <div class="store-btn-text">
+          <span class="small-text" id="i18n-store-play-sub">Get it on</span>
+          <span class="big-text">Google Play</span>
+        </div>
+      </a>
+    </div>
     
     <div class="hub-intro">
       <div class="hub-card">
         <div>
-          <h3>📦 PRE-MADE TEMPLATES</h3>
-          <p>Choose from our official Hypertrophy and Fat Loss routines below. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.</p>
+          <h3 id="i18n-hub-templates-title">📦 PRE-MADE TEMPLATES</h3>
+          <p id="i18n-hub-templates-desc">Choose from our official Hypertrophy and Fat Loss routines below. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.</p>
         </div>
-        <span style="font-size: 0.8rem; color: var(--cyan); font-weight: 700; text-transform: uppercase;">↓ Browse Routine Packs Below</span>
+        <span id="i18n-hub-templates-footer" style="font-size: 0.8rem; color: var(--cyan); font-weight: 700; text-transform: uppercase;">↓ Browse Routine Packs Below</span>
       </div>
 
       <div class="hub-card builder-card">
         <div>
-          <h3>⚙️ OFFICIAL WEB BUILDER</h3>
-          <p>Prefer creating your own routine from scratch? Use our interactive Web Builder to configure exercises, sets, reps, and timers comfortably.</p>
+          <h3 id="i18n-hub-builder-title">⚙️ OFFICIAL WEB BUILDER</h3>
+          <p id="i18n-hub-builder-desc">Prefer creating your own routine from scratch? Use our interactive Web Builder to configure exercises, sets, reps, and timers comfortably.</p>
         </div>
-        <a href="builder.html" class="btn btn-builder">
+        <a href="builder.html" class="btn btn-builder" id="i18n-btn-builder">
           ⚡ LAUNCH WEB BUILDER
         </a>
       </div>
     </div>
 
     <div class="instructions">
-      <h3>📋 HOW TO IMPORT INTO THE APP:</h3>
+      <h3 id="i18n-instructions-title">📋 HOW TO IMPORT INTO THE APP:</h3>
       <ol>
-        <li>Download a <strong>.JSON</strong> file from a template below or export one from the <strong>Web Builder</strong>.</li>
-        <li>Open <strong>CYBERPUMP</strong> on your phone and go to <strong>Export & Import</strong> (📤 icon).</li>
-        <li>Tap <strong>Pick File</strong> to load your downloaded JSON, or paste the text string and tap <strong>Preview & Select</strong>.</li>
+        <li id="i18n-step-1">Download a <strong>.JSON</strong> file from a template below or export one from the <strong>Web Builder</strong>.</li>
+        <li id="i18n-step-2">Open <strong>CYBERPUMP</strong> on your phone and go to <strong>Export & Import</strong> (📤 icon).</li>
+        <li id="i18n-step-3">Tap <strong>Pick File</strong> to load your downloaded JSON, or paste the text string and tap <strong>Preview & Select</strong>.</li>
       </ol>
     </div>
   </header>
@@ -457,112 +581,298 @@
   <div id="toast" class="toast">JSON Code copied to clipboard!</div>
 
   <script>
+    const i18n = {
+      en: {
+        brandSubtitle: "// WORKOUT HUB & BUILDER",
+        storeIosSub: "Download on the",
+        storePlaySub: "Get it on",
+        hubTemplatesTitle: "📦 PRE-MADE TEMPLATES",
+        hubTemplatesDesc: "Choose from our official Hypertrophy and Fat Loss routines below. Download the <strong>.JSON</strong> file or copy the code string directly into CYBERPUMP.",
+        hubTemplatesFooter: "↓ Browse Routine Packs Below",
+        hubBuilderTitle: "⚙️ OFFICIAL WEB BUILDER",
+        hubBuilderDesc: "Prefer creating your own routine from scratch? Use our interactive Web Builder to configure exercises, sets, reps, and timers comfortably.",
+        btnBuilder: "⚡ LAUNCH WEB BUILDER",
+        instructionsTitle: "📋 HOW TO IMPORT INTO THE APP:",
+        step1: "Download a <strong>.JSON</strong> file from a template below or export one from the <strong>Web Builder</strong>.",
+        step2: "Open <strong>CYBERPUMP</strong> on your phone and go to <strong>Export & Import</strong> (📤 icon).",
+        step3: "Tap <strong>Pick File</strong> to load your downloaded JSON, or paste the text string and tap <strong>Preview & Select</strong>.",
+        btnDownload: "💾 DOWNLOAD",
+        btnCopy: "📋 COPY CODE",
+        enlargeText: "🔍 CLICK TO ENLARGE",
+        toastCopied: "JSON Code copied to clipboard! Paste it into CYBERPUMP.",
+        toastError: "Error loading file. Check your file path."
+      },
+      it: {
+        brandSubtitle: "// HUB ALLENAMENTI & BUILDER",
+        storeIosSub: "Scarica su",
+        storePlaySub: "Disponibile su",
+        hubTemplatesTitle: "📦 SCHEDE PRONTE",
+        hubTemplatesDesc: "Scegli tra le nostre schede ufficiali per Ipertrofia e Dimagrimento qui sotto. Scarica il file <strong>.JSON</strong> o copia direttamente il codice in CYBERPUMP.",
+        hubTemplatesFooter: "↓ Esplora le Schede Sotto",
+        hubBuilderTitle: "⚙️ WEB BUILDER UFFICIALE",
+        hubBuilderDesc: "Preferisci creare la tua scheda da zero? Usa il nostro Web Builder interattivo per configurare comodamente esercizi, serie, rep e timer.",
+        btnBuilder: "⚡ AVVIA WEB BUILDER",
+        instructionsTitle: "📋 COME IMPORTARE NELL'APP:",
+        step1: "Scarica un file <strong>.JSON</strong> da una scheda qui sotto o esportalo dal <strong>Web Builder</strong>.",
+        step2: "Apri <strong>CYBERPUMP</strong> sul telefono e vai su <strong>Esporta & Importa</strong> (icona 📤).",
+        step3: "Tocca <strong>Scegli File</strong> per caricare il JSON, oppure incolla la stringa e tocca <strong>Anteprima & Seleziona</strong>.",
+        btnDownload: "💾 SCARICA",
+        btnCopy: "📋 COPIA CODICE",
+        enlargeText: "🔍 CLICCA PER INGRANDIRE",
+        toastCopied: "Codice JSON copiato negli appunti! Incollalo in CYBERPUMP.",
+        toastError: "Errore nel caricamento del file. Controlla il percorso."
+      },
+      es: {
+        brandSubtitle: "// HUB DE ENTRENAMIENTOS Y BUILDER",
+        storeIosSub: "Consíguelo en el",
+        storePlaySub: "Disponible en",
+        hubTemplatesTitle: "📦 RUTINAS PREDEFINIDAS",
+        hubTemplatesDesc: "Elige entre nuestras rutinas oficiales de Hipertrofia y Pérdida de Grasa. Descarga el archivo <strong>.JSON</strong> o copia el código directamente en CYBERPUMP.",
+        hubTemplatesFooter: "↓ Explora las Rutinas Abajo",
+        hubBuilderTitle: "⚙️ WEB BUILDER OFICIAL",
+        hubBuilderDesc: "¿Prefieres crear tu propia rutina desde cero? Usa nuestro Web Builder interactivo para configurar ejercicios, series, reps y temporizadores.",
+        btnBuilder: "⚡ INICIAR WEB BUILDER",
+        instructionsTitle: "📋 CÓMO IMPORTAR EN LA APP:",
+        step1: "Descarga un archivo <strong>.JSON</strong> de las plantillas o expórtalo desde el <strong>Web Builder</strong>.",
+        step2: "Abre <strong>CYBERPUMP</strong> en tu teléfono y ve a <strong>Exportar e Importar</strong> (icono 📤).",
+        step3: "Toca <strong>Elegir archivo</strong> para cargar el JSON, o pega el texto y toca <strong>Vista previa y Seleccionar</strong>.",
+        btnDownload: "💾 DESCARGAR",
+        btnCopy: "📋 COPIAR CÓDIGO",
+        enlargeText: "🔍 CLIC EN AMPLIAR",
+        toastCopied: "¡Código JSON copiado al portapapeles! Pégalo en CYBERPUMP.",
+        toastError: "Error al cargar el archivo. Comprueba la ruta."
+      }
+    };
+
     const templates = [
       {
-        title: "Beginner Hypertrophy",
-        subtitle: "Full Body Foundations",
         badge: "HYPERTROPHY // L1",
         image: "template/Beginner Hypertrophy.jpg",
         jsonFile: "template/Beginner Hypertrophy.json",
         type: "hypertrophy",
         level: "beginner",
-        description: "3-day full body routine designed to build foundational strength, technique, and muscle mass."
+        titles: {
+          en: "Beginner Hypertrophy",
+          it: "Ipertrofia Principianti",
+          es: "Hipertrofia Principiantes"
+        },
+        subtitles: {
+          en: "Full Body Foundations",
+          it: "Fondamenta Full Body",
+          es: "Bases de Cuerpo Completo"
+        },
+        descriptions: {
+          en: "3-day full body routine designed to build foundational strength, technique, and muscle mass.",
+          it: "Routine full body di 3 giorni ideata per costruire forza di base, tecnica e massa muscolare.",
+          es: "Rutina full body de 3 días diseñada para construir fuerza base, técnica y masa muscular."
+        }
       },
       {
-        title: "Intermediate Hypertrophy",
-        subtitle: "Push / Pull / Legs Split",
         badge: "HYPERTROPHY // L2",
         image: "template/Intermediate Hypertrophy.jpg",
         jsonFile: "template/Intermediate Hypertrophy.json",
         type: "hypertrophy",
         level: "intermediate",
-        description: "3-day Push / Pull / Legs split with higher volume per muscle group for maximum growth."
+        titles: {
+          en: "Intermediate Hypertrophy",
+          it: "Ipertrofia Intermedio",
+          es: "Hipertrofia Intermedio"
+        },
+        subtitles: {
+          en: "Push / Pull / Legs Split",
+          it: "Split Push / Pull / Legs",
+          es: "División Push / Pull / Legs"
+        },
+        descriptions: {
+          en: "3-day Push / Pull / Legs split with higher volume per muscle group for maximum growth.",
+          it: "Split di 3 giorni Push / Pull / Legs con volume maggiore per gruppo muscolare per massima crescita.",
+          es: "Rutina de 3 días Push / Pull / Legs con mayor volumen por grupo muscular para máximo crecimiento."
+        }
       },
       {
-        title: "Advanced Hypertrophy",
-        subtitle: "Upper / Lower Heavy Density",
         badge: "HYPERTROPHY // L3",
         image: "template/Advanced Hypertrophy.jpg",
         jsonFile: "template/Advanced Hypertrophy.json",
         type: "hypertrophy",
         level: "advanced",
-        description: "High-intensity heavy upper/lower routine with training sets taken close to muscle failure."
+        titles: {
+          en: "Advanced Hypertrophy",
+          it: "Ipertrofia Avanzato",
+          es: "Hipertrofia Avanzado"
+        },
+        subtitles: {
+          en: "Upper / Lower Heavy Density",
+          it: "Upper / Lower ad Alta Densità",
+          es: "Upper / Lower Alta Densidad"
+        },
+        descriptions: {
+          en: "High-intensity heavy upper/lower routine with training sets taken close to muscle failure.",
+          it: "Routine upper/lower ad alta intensità con serie portate vicino al cedimento muscolare.",
+          es: "Rutina upper/lower de alta intensidad con series llevadas cerca del fallo muscular."
+        }
       },
       {
-        title: "Beginner Fat Loss",
-        subtitle: "Total Body Circuits",
         badge: "FAT LOSS // L1",
         image: "template/Beginner Fat Loss.jpg",
         jsonFile: "template/Beginner Fat Loss.json",
         type: "fatloss",
         level: "beginner",
-        description: "Reps-based total body circuits engineered to elevate heart rate without excessive fatigue."
+        titles: {
+          en: "Beginner Fat Loss",
+          it: "Dimagrimento Principianti",
+          es: "Pérdida de Grasa Principiantes"
+        },
+        subtitles: {
+          en: "Total Body Circuits",
+          it: "Circuiti Total Body",
+          es: "Circuitos Cuerpo Completo"
+        },
+        descriptions: {
+          en: "Reps-based total body circuits engineered to elevate heart rate without excessive fatigue.",
+          it: "Circuiti a ripetizioni per alzare il battito cardiaco senza affaticamento eccessivo.",
+          es: "Circuitos basados en repeticiones diseñados para elevar la frecuencia cardíaca sin fatiga excesiva."
+        }
       },
       {
-        title: "Intermediate Fat Loss",
-        subtitle: "Time-Based Intervals",
         badge: "FAT LOSS // L2",
         image: "template/Intermediate Fat Loss.jpg",
         jsonFile: "template/Intermediate Fat Loss.json",
         type: "fatloss",
         level: "intermediate",
-        description: "Fixed interval work periods with short rest intervals for sustained metabolic output."
+        titles: {
+          en: "Intermediate Fat Loss",
+          it: "Dimagrimento Intermedio",
+          es: "Pérdida de Grasa Intermedio"
+        },
+        subtitles: {
+          en: "Time-Based Intervals",
+          it: "Intervalli a Tempo",
+          es: "Intervalos por Tiempo"
+        },
+        descriptions: {
+          en: "Fixed interval work periods with short rest intervals for sustained metabolic output.",
+          it: "Periodi di lavoro a intervalli fissi con riposi brevi per un output metabolico costante.",
+          es: "Trabajo por intervalos fijos con descansos cortos para mantener un ritmo metabólico alto."
+        }
       },
       {
-        title: "Advanced Fat Loss",
-        subtitle: "High-Intensity Metcon",
         badge: "FAT LOSS // L3",
         image: "template/Advanced Fat Loss.jpg",
         jsonFile: "template/Advanced Fat Loss.json",
         type: "fatloss",
         level: "advanced",
-        description: "High-intensity free weight & cardio circuits designed for maximum post-workout EPOC burn."
+        titles: {
+          en: "Advanced Fat Loss",
+          it: "Dimagrimento Avanzato",
+          es: "Pérdida de Grasa Avanzado"
+        },
+        subtitles: {
+          en: "High-Intensity Metcon",
+          it: "Metcon ad Alta Intensità",
+          es: "Metcon de Alta Intensidad"
+        },
+        descriptions: {
+          en: "High-intensity free weight & cardio circuits designed for maximum post-workout EPOC burn.",
+          it: "Circuiti ad alta intensità con pesi liberi e cardio per il massimo consumo calorico post-workout.",
+          es: "Circuitos de alta intensidad con pesos libres y cardio para máximo consumo calórico post-entrenamiento."
+        }
       }
     ];
 
-    const grid = document.getElementById('templates-grid');
+    let currentLang = 'en';
 
-    templates.forEach(tpl => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.setAttribute('data-type', tpl.type);
-      card.setAttribute('data-level', tpl.level);
+    function getAutoLanguage() {
+      const saved = localStorage.getItem('cyberpump_lang');
+      if (saved && ['en', 'it', 'es'].includes(saved)) return saved;
 
-      card.innerHTML = `
-        <span class="card-badge">${tpl.badge}</span>
-        <div class="card-img-wrapper" onclick="openModal('${tpl.image}')">
-          <img src="${tpl.image}" alt="${tpl.title}" class="card-img" onerror="this.src='https://via.placeholder.com/600x350/0d0d12/00f0ff?text=CYBERPUMP'">
-        </div>
-        <div class="card-header">
-          <div class="card-title">${tpl.title}</div>
-          <div class="card-subtitle">${tpl.subtitle}</div>
-        </div>
-        <div class="card-body">
-          <p class="card-desc">${tpl.description}</p>
-        </div>
-        <div class="card-footer">
-          <a href="${tpl.jsonFile}" download class="btn btn-primary">
-            💾 DOWNLOAD
-          </a>
-          <button class="btn btn-secondary" onclick="copyJsonFromPath('${tpl.jsonFile}')">
-            📋 COPY CODE
-          </button>
-        </div>
-      `;
+      const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
+      if (['it', 'es'].includes(browserLang)) return browserLang;
 
-      grid.appendChild(card);
-    });
+      return 'en';
+    }
+
+    function setLanguage(lang) {
+      if (!['en', 'it', 'es'].includes(lang)) lang = 'en';
+      currentLang = lang;
+      localStorage.setItem('cyberpump_lang', lang);
+      document.getElementById('langSelect').value = lang;
+
+      const dict = i18n[lang];
+
+      // Update static header elements
+      document.getElementById('i18n-brand-subtitle').textContent = dict.brandSubtitle;
+      document.getElementById('i18n-store-ios-sub').textContent = dict.storeIosSub;
+      document.getElementById('i18n-store-play-sub').textContent = dict.storePlaySub;
+      
+      document.getElementById('i18n-hub-templates-title').innerHTML = dict.hubTemplatesTitle;
+      document.getElementById('i18n-hub-templates-desc').innerHTML = dict.hubTemplatesDesc;
+      document.getElementById('i18n-hub-templates-footer').textContent = dict.hubTemplatesFooter;
+
+      document.getElementById('i18n-hub-builder-title').innerHTML = dict.hubBuilderTitle;
+      document.getElementById('i18n-hub-builder-desc').textContent = dict.hubBuilderDesc;
+      document.getElementById('i18n-btn-builder').textContent = dict.btnBuilder;
+
+      document.getElementById('i18n-instructions-title').textContent = dict.instructionsTitle;
+      document.getElementById('i18n-step-1').innerHTML = dict.step1;
+      document.getElementById('i18n-step-2').innerHTML = dict.step2;
+      document.getElementById('i18n-step-3').innerHTML = dict.step3;
+
+      renderGrid();
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('templates-grid');
+      grid.innerHTML = '';
+
+      const dict = i18n[currentLang];
+
+      templates.forEach(tpl => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.setAttribute('data-type', tpl.type);
+        card.setAttribute('data-level', tpl.level);
+
+        const title = tpl.titles[currentLang] || tpl.titles.en;
+        const subtitle = tpl.subtitles[currentLang] || tpl.subtitles.en;
+        const description = tpl.descriptions[currentLang] || tpl.descriptions.en;
+
+        card.innerHTML = `
+          <span class="card-badge">${tpl.badge}</span>
+          <div class="card-img-wrapper" data-enlarge-text="${dict.enlargeText}" onclick="openModal('${tpl.image}')">
+            <img src="${tpl.image}" alt="${title}" class="card-img" onerror="this.src='https://via.placeholder.com/600x350/0d0d12/00f0ff?text=CYBERPUMP'">
+          </div>
+          <div class="card-header">
+            <div class="card-title">${title}</div>
+            <div class="card-subtitle">${subtitle}</div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">${description}</p>
+          </div>
+          <div class="card-footer">
+            <a href="${tpl.jsonFile}" download class="btn btn-primary">
+              ${dict.btnDownload}
+            </a>
+            <button class="btn btn-secondary" onclick="copyJsonFromPath('${tpl.jsonFile}')">
+              ${dict.btnCopy}
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
 
     // Copy JSON file contents to clipboard
     async function copyJsonFromPath(filePath) {
+      const dict = i18n[currentLang];
       try {
         const response = await fetch(filePath);
         if (!response.ok) throw new Error("Could not load JSON file");
         const jsonText = await response.text();
         await navigator.clipboard.writeText(jsonText);
-        showToast("JSON Code copied to clipboard! Paste it into CYBERPUMP.");
+        showToast(dict.toastCopied);
       } catch (err) {
-        showToast("Error loading file. Check your file path.");
+        showToast(dict.toastError);
         console.error(err);
       }
     }
@@ -588,6 +898,17 @@
         toast.classList.remove('show');
       }, 3000);
     }
+
+    // Init Language Listener
+    document.getElementById('langSelect').addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // Auto-detect & Initial Load
+    document.addEventListener('DOMContentLoaded', () => {
+      const initialLang = getAutoLanguage();
+      setLanguage(initialLang);
+    });
   </script>
 </body>
 </html>
